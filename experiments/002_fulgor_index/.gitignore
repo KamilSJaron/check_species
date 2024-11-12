@@ -1,3 +1,4 @@
 *.fur
 kmeans_clusters.tsv
+*.colors.dat
 

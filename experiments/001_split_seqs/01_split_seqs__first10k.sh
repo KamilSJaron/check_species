@@ -9,7 +9,7 @@ xzcat -v ibol.fa.xz \
 	| awk '/^>BOLD:/ {
 		split(substr($0, 2), a, "_")
 		sub(/^BOLD:/, "", a[1])
-		OUT = "seqs/" a[1] ".fa"
+		OUT = "seqs_10k/" a[1] ".fa"
 	}
 	{
 		print >> OUT

@@ -4,10 +4,19 @@ set -e
 set -o pipefail
 set -u
 
-find seqs_10k -name '*.fa' \
-	| xz -9 -T1 \
-	> seqs_10k.txt.xz
+(
+	cd seqs_10k
+	find . -name '*.fa' \
+		| sort \
+		| xz -9 -T1 \
+		> fof.txt.xz
+)
 
-find seqs_all -name '*.fa' \
-	| xz -9 -T1 \
-	> seqs_all.txt.xz
+(
+	cd seqs_all
+	find . -name '*.fa' \
+		| sort \
+		| xz -9 -T1 \
+		> fof.txt.xz
+)
+

@@ -6,13 +6,7 @@ set -u
 #set -f
 #PS4='\[\e[32m\][$(date "+%Y-%m-%d %H:%M:%S") L${LINENO}]\[\e[0m\] '; set -x
 
-readonly PROGNAME=$(basename $0)
-readonly PROGDIR=$(dirname $0)
-readonly -a ARGS=("$@")
-readonly NARGS="$#"
+./fulgor build -t 8 -k 31 -m 20 -l <(xzcat seqs_10k/fof.txt.xz) -o index.fur
 
-#if [[ $NARGS -ne 1 ]]; then
-#	>&2 echo "usage: $PROGNAME options"
-#	exit 1
-#fi
+
 
